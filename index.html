@@ -49,7 +49,6 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-   
         config.devicePixelRatio = 1;
      
       } else {
@@ -62,9 +61,7 @@
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
 			unityInstance.SetFullscreen(1);
-        }).then((unityInstance) => {
-         
-          };
+        }).then((unityInstance) => {};
         }).catch((message) => {
           alert(message);
         });
